@@ -3,58 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketplace | Circuify</title>
+    <title>Diagon Alley | Circuify</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .dashboard {
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 2rem;
-            padding: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .sidebar {
-            background: white;
-            padding: 1.5rem;
-            border: 1px solid #e5e7eb;
-            border-radius: 0.5rem;
-            height: fit-content;
-        }
-
+        .dashboard { display: grid; grid-template-columns: 250px 1fr; gap: 2rem; padding: 2rem; max-width: 1400px; margin: 0 auto; }
+        .sidebar { background: white; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; height: fit-content; }
         .sidebar h3 { margin-bottom: 1rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; }
-        
         .filter-group { margin-bottom: 1.5rem; }
         .filter-group label { display: block; margin-bottom: 0.5rem; color: #374151; font-weight: 500; }
         .filter-group select, .filter-group input { width: 100%; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 0.25rem; }
-
-        .marketplace-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .listing-card {
-            border: 1px solid #e5e7eb;
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            background: white;
-        }
-
-        .listing-tag {
-            background: #dcfce7;
-            color: #166534;
-            padding: 0.25rem 0.5rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            width: fit-content;
-        }
-
+        .marketplace-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+        .listing-card { border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; background: white; }
+        .listing-tag { background: #dcfce7; color: #166534; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem; font-weight: bold; width: fit-content; }
         .price-row { display: flex; justify-content: space-between; align-items: center; font-weight: bold; font-size: 1.25rem; color: #111827; margin-top: 0.5rem; }
         .details-list { font-size: 0.875rem; color: #6b7280; list-style: none; }
         .details-list li { margin-bottom: 0.25rem; display: flex; gap: 0.5rem; }
@@ -66,85 +26,85 @@
             <span class="icon">♻️</span> Circuify
         </div>
         <div class="nav-buttons">
-            <span style="margin-right: 1rem; font-weight: 500;">Buyer Portal</span>
-            <button class="btn-secondary" onclick="window.location.href='role.html'">Switch Role</button>
+            <span style="margin-right: 1rem; font-weight: 500;">Ministry Buyer Portal</span>
+            <button class="btn-secondary" onclick="window.location.href='role.html'">Use Floo Network (Switch Role)</button>
         </div>
     </header>
 
     <main class="dashboard">
         <aside class="sidebar">
-            <h3>Filters</h3>
+            <h3>Sorting Hat Filters</h3>
             <div class="filter-group">
                 <label>Waste Category</label>
                 <select>
                     <option>All Categories</option>
-                    <option>Metal & Slag</option>
-                    <option>Chemical Waste</option>
-                    <option>Organic / Bio</option>
-                    <option>Textile Scraps</option>
-                    <option>Paper & Cardboard</option>
-                    <option>E-Waste</option>
-                    <option>Construction</option>
-                    <option>Industrial Fuel</option>
+                    <option>Dragon Scale Metals</option>
+                    <option>Potion Residues</option>
+                    <option>Herbology Scraps</option>
+                    <option>Wizard Robes</option>
+                    <option>Parchment & Scrolls</option>
+                    <option>Muggle Artifacts</option>
+                    <option>Castle Stones</option>
+                    <option>Phoenix Ashes</option>
                 </select>
             </div>
             <div class="filter-group">
-                <label>Quantity Minimum (Tonnes)</label>
+                <label>Quantity Minimum (Cauldrons)</label>
                 <input type="number" placeholder="e.g. 50">
             </div>
             <div class="filter-group">
-                <label>Location Radius</label>
-                <select><option>Within 50km</option><option>Within 100km</option><option>Nationwide</option></select>
+                <label>Broomstick Distance</label>
+                <select><option>Within Hogsmeade</option><option>Within 100 Leagues</option><option>Global</option></select>
             </div>
-            <button class="btn-primary" style="width: 100%;">Apply Filters</button>
+            <button class="btn-primary" style="width: 100%;">Cast Filter Charm</button>
         </aside>
 
         <section>
-            <h2 style="margin-bottom: 1.5rem;">Available Raw Materials</h2>
+            <h2 style="margin-bottom: 1.5rem;">Available Scrap Treasures</h2>
             <div class="marketplace-grid">
                 
                 <div class="listing-card">
-                    <span class="listing-tag">Metal & Slag</span>
-                    <h3>High-Grade Steel Slag</h3>
-                    <p style="color: #6b7280; font-size: 0.875rem;">Consistent monthly output from automotive manufacturing.</p>
+                    <span class="listing-tag">Dragon Scale Metals</span>
+                    <h3>Slightly Charred Ironbelly Scales</h3>
+                    <p style="color: #6b7280; font-size: 0.875rem;">Consistent monthly output from the Gringotts security division.</p>
                     <ul class="details-list">
-                        <li>📍 25 km away (Industrial Zone)</li>
-                        <li>⚖️ 120 Tonnes / Month</li>
-                        <li>⭐ Verified Supplier</li>
+                        <li>📍 25 leagues away (London)</li>
+                        <li>⚖️ 120 Cauldrons / Month</li>
+                        <li>⭐ Ministry Verified</li>
                     </ul>
                     <div class="price-row">
-                        <span>₹1,200 / T</span>
-                        <button class="btn-primary" style="padding: 0.5rem;">Negotiate</button>
+                        <span>1,200 Galleons</span>
+                        <button class="btn-primary" style="padding: 0.5rem;">Send Owl</button>
                     </div>
                 </div>
 
                 <div class="listing-card">
-                    <span class="listing-tag">Textile Scraps</span>
-                    <h3>Cotton Fabric Offcuts</h3>
-                    <p style="color: #6b7280; font-size: 0.875rem;">Clean, sorted cotton remnants from garment factory.</p>
+                    <span class="listing-tag">Wizard Robes</span>
+                    <h3>Acromantula Silk Offcuts</h3>
+                    <p style="color: #6b7280; font-size: 0.875rem;">Clean, sorted remnants from Madam Malkin's workshop.</p>
                     <ul class="details-list">
-                        <li>📍 10 km away</li>
-                        <li>⚖️ 45 Tonnes Available Now</li>
+                        <li>📍 Diagon Alley</li>
+                        <li>⚖️ 45 Bundles Available Now</li>
                         <li>⭐ Quality Assured</li>
                     </ul>
                     <div class="price-row">
-                        <span>₹8,500 / T</span>
-                        <button class="btn-primary" style="padding: 0.5rem;">Negotiate</button>
+                        <span>850 Galleons</span>
+                        <button class="btn-primary" style="padding: 0.5rem;">Send Owl</button>
                     </div>
                 </div>
 
                 <div class="listing-card">
-                    <span class="listing-tag">Organic / Bio</span>
-                    <h3>Sugarcane Bagasse</h3>
-                    <p style="color: #6b7280; font-size: 0.875rem;">Ideal for paper production or bio-fuel processing.</p>
+                    <span class="listing-tag">Herbology Scraps</span>
+                    <h3>Mandrake Leaf Compost</h3>
+                    <p style="color: #6b7280; font-size: 0.875rem;">Highly potent. Ideal for restoring petrified plants or advanced potion bases.</p>
                     <ul class="details-list">
-                        <li>📍 80 km away (Agri-Sector)</li>
-                        <li>⚖️ 500 Tonnes / Harvest</li>
+                        <li>📍 Hogwarts Greenhouses</li>
+                        <li>⚖️ 500 Bags / Term</li>
                         <li>⭐ Verified Supplier</li>
                     </ul>
                     <div class="price-row">
-                        <span>₹2,100 / T</span>
-                        <button class="btn-primary" style="padding: 0.5rem;">Negotiate</button>
+                        <span>210 Galleons</span>
+                        <button class="btn-primary" style="padding: 0.5rem;">Send Owl</button>
                     </div>
                 </div>
 

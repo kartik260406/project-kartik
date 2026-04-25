@@ -6,59 +6,14 @@
     <title>Select Role | Circuify</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .role-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 80vh;
-            padding: 2rem;
-        }
-
-        .role-container {
-            max-width: 800px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .role-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .role-card {
-            padding: 3rem 2rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .role-card:hover {
-            border-color: #16a34a;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
-        }
-
-        .role-icon {
-            font-size: 3rem;
-        }
-
-        .role-card h3 {
-            font-size: 1.5rem;
-            color: #111827;
-        }
-
-        .role-card p {
-            color: #6b7280;
-            margin-bottom: 1rem;
-        }
+        .role-section { display: flex; justify-content: center; align-items: center; min-height: 80vh; padding: 2rem; }
+        .role-container { max-width: 800px; width: 100%; text-align: center; }
+        .role-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .role-card { padding: 3rem 2rem; border: 2px solid #e5e7eb; border-radius: 1rem; cursor: pointer; transition: all 0.3s ease; background: white; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+        .role-card:hover { border-color: #16a34a; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transform: translateY(-5px); }
+        .role-icon { font-size: 3rem; }
+        .role-card h3 { font-size: 1.5rem; color: #111827; }
+        .role-card p { color: #6b7280; margin-bottom: 1rem; }
     </style>
 </head>
 <body>
@@ -67,48 +22,41 @@
             <span class="icon">♻️</span> Circuify
         </div>
         <div class="nav-buttons">
-            <button class="btn-secondary" onclick="window.location.href='index.html'">Sign Out</button>
+            <button class="btn-secondary" onclick="window.location.href='index.html'">Apparate (Sign Out)</button>
         </div>
     </header>
 
     <main>
         <section class="role-section">
             <div class="role-container">
-                <h2>Welcome to the Circular Economy Revolution</h2>
-                <p style="color: #6b7280; font-size: 1.125rem; margin-top: 0.5rem;">How would you like to participate in the marketplace today?</p>
+                <h2>Welcome to the Order of Recyclers</h2>
+                <p style="color: #6b7280; font-size: 1.125rem; margin-top: 0.5rem;">Which path will your magical enterprise take today?</p>
                 
                 <div class="role-grid">
-            <div class="role-card">
-                <div class="role-icon">🏭</div>
-                <h3>Resource Seeker</h3>
-                <p>I want to access affordable, sustainable raw materials with reliable supply chains.</p>
-                <a href="buyer-dashboard.html" style="width: 100%; text-decoration: none;">
-                <button class="btn-secondary" style="width: 100%;">Browse Materials</button>
-                </a>
-            </div>
+                    <div class="role-card">
+                        <div class="role-icon">🧪</div>
+                        <h3>Resource Seeker</h3>
+                        <p>I am a Potions Master or Craftsman looking for sustainable, magical raw materials.</p>
+                        <a href="buyer.html" style="width: 100%; text-decoration: none;">
+                            <button class="btn-secondary" style="width: 100%;">Accio Materials</button>
+                        </a>
+                    </div>
 
-            <div class="role-card">
-                <div class="role-icon">📦</div>
-                    <h3>Waste Producer</h3>
-                    <p>I want to turn disposal costs into revenue streams while reducing my footprint.</p>
-                    <a href="seller-dashboard.html" style="width: 100%; text-decoration: none;">
-                    <button class="btn-primary" style="width: 100%;">List Waste Outputs</button>
-                    </a>
+                    <div class="role-card">
+                        <div class="role-icon">🐉</div>
+                        <h3>Waste Producer</h3>
+                        <p>I have byproducts from my spells and beasts, and I want to turn them into Galleons.</p>
+                        <a href="seller.html" style="width: 100%; text-decoration: none;">
+                            <button class="btn-primary" style="width: 100%;">Open Vault</button>
+                        </a>
+                    </div>
                 </div>
-            </div>
             </div>
         </section>
     </main>
 
-    <script>
-        // JavaScript to handle the routing
-        function selectRole(role) {
-            if (role === 'buyer') {
-                window.location.href = 'buyer.html';
-            } else if (role === 'seller') {
-                window.location.href = 'seller.html';
-            }
-        }
-    </script>
+    <footer style="text-align: center; padding: 2rem; color: #9ca3af;">
+        <p>Made with magic by Team Syntax Sorcerers - Mischief Managed!</p>
+    </footer>
 </body>
 </html>
