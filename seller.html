@@ -4,30 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vault Analytics | Circuify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .dashboard-container { padding: 2rem; max-width: 1200px; margin: 0 auto; }
-        .header-action { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
-        .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
-        .kpi-card { background: white; padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb; border-left: 4px solid #16a34a; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-        .kpi-title { font-size: 0.875rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;}
-        .kpi-value { font-size: 2rem; font-weight: bold; color: #111827; }
-        .green-score { border-left-color: #059669; background: #ecfdf5; }
-        .dashboard-panels { display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; }
-        .panel { background: white; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1.5rem; }
-        .panel h3 { margin-bottom: 1rem; color: #374151; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem;}
-        .data-row { display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid #f3f4f6; }
-        .data-row:last-child { border-bottom: none; }
-        .status-badge { background: #dcfce7; color: #166534; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: bold; }
-    </style>
+    <link rel="stylesheet" href="seller.css">
 </head>
-<body style="background-color: #f9fafb;">
-    <header style="background: white;">
+<body>
+    <header>
         <div class="logo">
-            <span class="icon">♻️</span> Circuify
+            <span class="icon">✨</span> Circuify
         </div>
         <div class="nav-buttons">
-            <span style="margin-right: 1rem; font-weight: 500;">Gringotts Seller Portal</span>
+            <span class="portal-label">Gringotts Seller Portal</span>
             <button class="btn-secondary" onclick="window.location.href='role.html'">Use Floo Network (Switch Role)</button>
         </div>
     </header>
@@ -53,7 +40,7 @@
             </div>
             <div class="kpi-card green-score">
                 <div class="kpi-title">🌿 Herbology Score</div>
-                <div class="kpi-value" style="color: #059669;">Outstanding (O)</div>
+                <div class="kpi-value emerald-text">Outstanding (O)</div>
             </div>
         </div>
 
@@ -63,44 +50,13 @@
                 <div class="data-row">
                     <div>
                         <strong>Welsh Green Scales (Batch A)</strong>
-                        <p style="font-size: 0.875rem; color: #6b7280;">Dragon Scale Metals • 50 Tonnes</p>
+                        <p class="row-subtitle">Dragon Scale Metals • 50 Tonnes</p>
                     </div>
-                    <div style="text-align: right;">
-                        <span class="status-badge" style="background: #fef3c7; color: #92400e;">Owl Sent (Negotiating)</span>
+                    <div class="badge-container">
+                        <span class="status-badge badge-warning">Owl Sent (Negotiating)</span>
                     </div>
                 </div>
                 <div class="data-row">
                     <div>
                         <strong>Polyjuice Preparation Residue</strong>
-                        <p style="font-size: 0.875rem; color: #6b7280;">Potion Residues • 15 Tonnes</p>
-                    </div>
-                    <div style="text-align: right;">
-                        <span class="status-badge">Unbreakable Vow (Matched)</span>
-                    </div>
-                </div>
-                <div class="data-row">
-                    <div>
-                        <strong>Shattered Castle Gargoyles</strong>
-                        <p style="font-size: 0.875rem; color: #6b7280;">Castle Stones • 100 Tonnes</p>
-                    </div>
-                    <div style="text-align: right;">
-                        <span class="status-badge" style="background: #e5e7eb; color: #374151;">Seeking Buyer</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="panel">
-                <h3>Scrap Distributed by Magic</h3>
-                <div class="data-row"><span>Dragon Scale Metals</span> <strong>42%</strong></div>
-                <div class="data-row"><span>Potion Residues</span> <strong>21%</strong></div>
-                <div class="data-row"><span>Herbology Scraps</span> <strong>18%</strong></div>
-                <div class="data-row"><span>Castle Stones</span> <strong>11%</strong></div>
-                <div class="data-row"><span>Others</span> <strong>8%</strong></div>
-                <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
-                    <p style="font-size: 0.875rem; color: #16a34a; font-weight: bold;">↑ 250% Growth over 6 months</p>
-                </div>
-            </div>
-        </div>
-    </main>
-</body>
-</html>
+                        <p class="row-subtitle">Potion Residues • 15 Tonnes</p>

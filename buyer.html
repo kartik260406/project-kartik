@@ -4,29 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diagon Alley | Circuify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .dashboard { display: grid; grid-template-columns: 250px 1fr; gap: 2rem; padding: 2rem; max-width: 1400px; margin: 0 auto; }
-        .sidebar { background: white; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; height: fit-content; }
-        .sidebar h3 { margin-bottom: 1rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; }
-        .filter-group { margin-bottom: 1.5rem; }
-        .filter-group label { display: block; margin-bottom: 0.5rem; color: #374151; font-weight: 500; }
-        .filter-group select, .filter-group input { width: 100%; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 0.25rem; }
-        .marketplace-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
-        .listing-card { border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; background: white; }
-        .listing-tag { background: #dcfce7; color: #166534; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem; font-weight: bold; width: fit-content; }
-        .price-row { display: flex; justify-content: space-between; align-items: center; font-weight: bold; font-size: 1.25rem; color: #111827; margin-top: 0.5rem; }
-        .details-list { font-size: 0.875rem; color: #6b7280; list-style: none; }
-        .details-list li { margin-bottom: 0.25rem; display: flex; gap: 0.5rem; }
-    </style>
+    <link rel="stylesheet" href="buyer.css">
 </head>
-<body style="background-color: #f9fafb;">
-    <header style="background: white;">
+<body>
+    <header>
         <div class="logo">
-            <span class="icon">♻️</span> Circuify
+            <span class="icon">✨</span> Circuify
         </div>
         <div class="nav-buttons">
-            <span style="margin-right: 1rem; font-weight: 500;">Ministry Buyer Portal</span>
+            <span class="portal-label">Ministry Buyer Portal</span>
             <button class="btn-secondary" onclick="window.location.href='role.html'">Use Floo Network (Switch Role)</button>
         </div>
     </header>
@@ -54,62 +42,23 @@
             </div>
             <div class="filter-group">
                 <label>Broomstick Distance</label>
-                <select><option>Within Hogsmeade</option><option>Within 100 Leagues</option><option>Global</option></select>
+                <select>
+                    <option>Within Hogsmeade</option>
+                    <option>Within 100 Leagues</option>
+                    <option>Global</option>
+                </select>
             </div>
-            <button class="btn-primary" style="width: 100%;">Cast Filter Charm</button>
+            <button class="btn-primary" style="width: 100%; margin-top: 1rem;">Cast Filter Charm</button>
         </aside>
 
-        <section>
-            <h2 style="margin-bottom: 1.5rem;">Available Scrap Treasures</h2>
+        <section class="marketplace-section">
+            <h2>Available Scrap Treasures</h2>
             <div class="marketplace-grid">
                 
                 <div class="listing-card">
                     <span class="listing-tag">Dragon Scale Metals</span>
                     <h3>Slightly Charred Ironbelly Scales</h3>
-                    <p style="color: #6b7280; font-size: 0.875rem;">Consistent monthly output from the Gringotts security division.</p>
+                    <p class="listing-desc">Consistent monthly output from the Gringotts security division.</p>
                     <ul class="details-list">
                         <li>📍 25 leagues away (London)</li>
-                        <li>⚖️ 120 Cauldrons / Month</li>
-                        <li>⭐ Ministry Verified</li>
-                    </ul>
-                    <div class="price-row">
-                        <span>1,200 Galleons</span>
-                        <button class="btn-primary" style="padding: 0.5rem;">Send Owl</button>
-                    </div>
-                </div>
-
-                <div class="listing-card">
-                    <span class="listing-tag">Wizard Robes</span>
-                    <h3>Acromantula Silk Offcuts</h3>
-                    <p style="color: #6b7280; font-size: 0.875rem;">Clean, sorted remnants from Madam Malkin's workshop.</p>
-                    <ul class="details-list">
-                        <li>📍 Diagon Alley</li>
-                        <li>⚖️ 45 Bundles Available Now</li>
-                        <li>⭐ Quality Assured</li>
-                    </ul>
-                    <div class="price-row">
-                        <span>850 Galleons</span>
-                        <button class="btn-primary" style="padding: 0.5rem;">Send Owl</button>
-                    </div>
-                </div>
-
-                <div class="listing-card">
-                    <span class="listing-tag">Herbology Scraps</span>
-                    <h3>Mandrake Leaf Compost</h3>
-                    <p style="color: #6b7280; font-size: 0.875rem;">Highly potent. Ideal for restoring petrified plants or advanced potion bases.</p>
-                    <ul class="details-list">
-                        <li>📍 Hogwarts Greenhouses</li>
-                        <li>⚖️ 500 Bags / Term</li>
-                        <li>⭐ Verified Supplier</li>
-                    </ul>
-                    <div class="price-row">
-                        <span>210 Galleons</span>
-                        <button class="btn-primary" style="padding: 0.5rem;">Send Owl</button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </main>
-</body>
-</html>
+                        <li>⚖️ 120 Caul
