@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace | Circuify</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .sidebar {
+            background: white;
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            height: fit-content;
+        }
+
+        .sidebar h3 { margin-bottom: 1rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; }
+        
+        .filter-group { margin-bottom: 1.5rem; }
+        .filter-group label { display: block; margin-bottom: 0.5rem; color: #374151; font-weight: 500; }
+        .filter-group select, .filter-group input { width: 100%; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 0.25rem; }
+
+        .marketplace-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .listing-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            background: white;
+        }
+
+        .listing-tag {
+            background: #dcfce7;
+            color: #166534;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            width: fit-content;
+        }
+
+        .price-row { display: flex; justify-content: space-between; align-items: center; font-weight: bold; font-size: 1.25rem; color: #111827; margin-top: 0.5rem; }
+        .details-list { font-size: 0.875rem; color: #6b7280; list-style: none; }
+        .details-list li { margin-bottom: 0.25rem; display: flex; gap: 0.5rem; }
+    </style>
+</head>
+<body style="background-color: #f9fafb;">
+    <header style="background: white;">
+        <div class="logo">
+            <span class="icon">♻️</span> Circuify
+        </div>
+        <div class="nav-buttons">
+            <span style="margin-right: 1rem; font-weight: 500;">Buyer Portal</span>
+            <button class="btn-secondary" onclick="window.location.href='role.html'">Switch Role</button>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <aside class="sidebar">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <label>Waste Category</label>
+                <select>
+                    <option>All Categories</option>
+                    <option>Metal & Slag</option>
+                    <option>Chemical Waste</option>
+                    <option>Organic / Bio</option>
+                    <option>Textile Scraps</option>
+                    <option>Paper & Cardboard</option>
+                    <option>E-Waste</option>
+                    <option>Construction</option>
+                    <option>Industrial Fuel</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Quantity Minimum (Tonnes)</label>
+                <input type="number" placeholder="e.g. 50">
+            </div>
+            <div class="filter-group">
+                <label>Location Radius</label>
+                <select><option>Within 50km</option><option>Within 100km</option><option>Nationwide</option></select>
+            </div>
+            <button class="btn-primary" style="width: 100%;">Apply Filters</button>
+        </aside>
+
+        <section>
+            <h2 style="margin-bottom: 1.5rem;">Available Raw Materials</h2>
+            <div class="marketplace-grid">
+                
+                <div class="listing-card">
+                    <span class="listing-tag">Metal & Slag</span>
+                    <h3>High-Grade Steel Slag</h3>
+                    <p style="color: #6b7280; font-size: 0.875rem;">Consistent monthly output from automotive manufacturing.</p>
+                    <ul class="details-list">
+                        <li>📍 25 km away (Industrial Zone)</li>
+                        <li>⚖️ 120 Tonnes / Month</li>
+                        <li>⭐ Verified Supplier</li>
+                    </ul>
+                    <div class="price-row">
+                        <span>₹1,200 / T</span>
+                        <button class="btn-primary" style="padding: 0.5rem;">Negotiate</button>
+                    </div>
+                </div>
+
+                <div class="listing-card">
+                    <span class="listing-tag">Textile Scraps</span>
+                    <h3>Cotton Fabric Offcuts</h3>
+                    <p style="color: #6b7280; font-size: 0.875rem;">Clean, sorted cotton remnants from garment factory.</p>
+                    <ul class="details-list">
+                        <li>📍 10 km away</li>
+                        <li>⚖️ 45 Tonnes Available Now</li>
+                        <li>⭐ Quality Assured</li>
+                    </ul>
+                    <div class="price-row">
+                        <span>₹8,500 / T</span>
+                        <button class="btn-primary" style="padding: 0.5rem;">Negotiate</button>
+                    </div>
+                </div>
+
+                <div class="listing-card">
+                    <span class="listing-tag">Organic / Bio</span>
+                    <h3>Sugarcane Bagasse</h3>
+                    <p style="color: #6b7280; font-size: 0.875rem;">Ideal for paper production or bio-fuel processing.</p>
+                    <ul class="details-list">
+                        <li>📍 80 km away (Agri-Sector)</li>
+                        <li>⚖️ 500 Tonnes / Harvest</li>
+                        <li>⭐ Verified Supplier</li>
+                    </ul>
+                    <div class="price-row">
+                        <span>₹2,100 / T</span>
+                        <button class="btn-primary" style="padding: 0.5rem;">Negotiate</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>
